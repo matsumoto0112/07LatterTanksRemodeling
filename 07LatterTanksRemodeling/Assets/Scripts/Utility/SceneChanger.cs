@@ -45,8 +45,14 @@ public class SceneChanger : MonoBehaviour
     /// <param name="scene"></param>
     public void Change(SceneName scene)
     {
-        Fade.Instance().FadeOut(1.0f, Color.black);
+        StartCoroutine(ChangeCoroutine(scene));
+    }
+
+    public IEnumerator ChangeCoroutine(SceneName scene)
+    {
+        yield return StartCoroutine(Fade.Instance().FadeOutCoroutine(1.0f, Color.black));
         UnityEngine.SceneManagement.SceneManager.LoadScene(scene.String());
+        Fade.Instance().FadeIn(1.0f, Color.black);
     }
 
     private static void Init()
