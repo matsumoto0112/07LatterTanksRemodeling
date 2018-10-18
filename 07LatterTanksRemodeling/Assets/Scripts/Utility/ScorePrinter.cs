@@ -20,7 +20,13 @@ public class ScorePrinter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "スコア:" + score.score;
-        comboText.text = "コンボ:" + score.comboNum;
+        if (scoreText != null)
+        {
+            scoreText.text = "Score:" + score.score;
+        }
+        if (comboText != null)
+        {
+            comboText.text = score.comboNum + "Combo";
+        }
     }
 }
