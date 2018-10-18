@@ -7,8 +7,7 @@ public enum SceneName
 {
 Title,
 Main,
-Ending,
-Test,
+Result,
 }
 public static class SceneNameManager
 {
@@ -16,8 +15,7 @@ public static class SceneNameManager
 {
     {SceneName.Title,"Title"},
     {SceneName.Main,"Main"},
-    {SceneName.Ending,"Ending"},
-    {SceneName.Test,"Test"},
+    {SceneName.Result,"Result"},
 };
     public static bool Equals(SceneName scenename, string name)
     {
