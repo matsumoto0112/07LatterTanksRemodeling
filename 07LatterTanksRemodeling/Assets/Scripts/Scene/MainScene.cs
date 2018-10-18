@@ -6,6 +6,8 @@ public class MainScene : MonoBehaviour
 {
     [SerializeField, Header("ゲームの制限時間")]
     private float limitTime;
+    [SerializeField, Header("次のシーン")]
+    private SceneName next;
 
     private void Start()
     {
@@ -15,6 +17,6 @@ public class MainScene : MonoBehaviour
     private IEnumerator LimitUpdate(float limitTime)
     {
         yield return new WaitForSeconds(limitTime);
-        SceneChanger.Instance().Change(SceneName.Result);
+        SceneChanger.Instance().Change(next);
     }
 }
