@@ -50,6 +50,8 @@ public class Fade : MonoBehaviour
         //フェードの初期設定
         Image image = go.AddComponent<Image>();
         image.color = new Color(0, 0, 0, 0);
+        //デフォルトのUIよりも前面に出す
+        canvas.sortingOrder = 1;
     }
 
     /// <summary>
