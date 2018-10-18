@@ -12,7 +12,8 @@ EditorOnly,
 MainCamera,
 Player,
 GameController,
-Newtag,
+Target,
+Bullet,
 }
 public static class TagNameManager
 {
@@ -25,7 +26,8 @@ public static class TagNameManager
     {TagName.MainCamera,"MainCamera"},
     {TagName.Player,"Player"},
     {TagName.GameController,"GameController"},
-    {TagName.Newtag,"Newtag"},
+    {TagName.Target,"Target"},
+    {TagName.Bullet,"Bullet"},
 };
     public static bool Equals(TagName tagname, string name)
     {
