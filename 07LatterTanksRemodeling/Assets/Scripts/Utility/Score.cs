@@ -48,7 +48,7 @@ public class Score : MonoBehaviour
     {
         score = 0;
         comboNum = 0;
-        comboWaitTime = 1.0f;
+        comboWaitTime = 10.0f;
         comboBonus = 1000;
         if (comboCoroutine != null)
         {
@@ -68,10 +68,12 @@ public class Score : MonoBehaviour
         ComboCoroutineStart();
     }
 
-    private void AddScore(int num)
+    public void AddScore(int num)
     {
         this.score += num;
     }
+
+    
 
     private void AddCombo()
     {
