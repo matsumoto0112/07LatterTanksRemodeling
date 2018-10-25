@@ -36,7 +36,7 @@ namespace Complete
         {
             // When the tank is enabled, reset the tank's health and whether or not it's dead.
             m_CurrentHealth = m_StartingHealth;
-            m_Dead = false;
+            m_Dead = true;
 
             // Update the health slider's value and color.
             SetHealthUI();
@@ -72,20 +72,20 @@ namespace Complete
         private void OnDeath ()
         {
             // Set the flag so that this function is only called once.
-            m_Dead = true;
+            //m_Dead = true;
 
-            // Move the instantiated explosion prefab to the tank's position and turn it on.
-            m_ExplosionParticles.transform.position = transform.position;
-            m_ExplosionParticles.gameObject.SetActive (true);
+            //// Move the instantiated explosion prefab to the tank's position and turn it on.
+            //m_ExplosionParticles.transform.position = transform.position;
+            //m_ExplosionParticles.gameObject.SetActive (true);
 
-            // Play the particle system of the tank exploding.
-            m_ExplosionParticles.Play ();
+            //// Play the particle system of the tank exploding.
+            //m_ExplosionParticles.Play ();
 
-            // Play the tank explosion sound effect.
-            m_ExplosionAudio.Play();
+            //// Play the tank explosion sound effect.
+            //m_ExplosionAudio.Play();
 
-            // Turn the tank off.
-            gameObject.SetActive (false);
+            //// Turn the tank off.
+            //gameObject.SetActive (false);
         }
     }
 }

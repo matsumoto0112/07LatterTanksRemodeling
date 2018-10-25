@@ -46,12 +46,12 @@ public class Fade : MonoBehaviour
         DontDestroyOnLoad(go);
         //キャンバスの追加
         Canvas canvas = go.AddComponent<Canvas>();
-        //キャンバスをメインカメラに描画されるように設定
-        canvas.renderMode = RenderMode.ScreenSpaceCamera;
-        canvas.worldCamera = Camera.main;
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         //フェードの初期設定
         Image image = go.AddComponent<Image>();
         image.color = new Color(0, 0, 0, 0);
+        //デフォルトのUIよりも前面に出す
+        canvas.sortingOrder = 1;
     }
 
     /// <summary>
